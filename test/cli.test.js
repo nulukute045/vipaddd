@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { parseRemoteUrl, printHelp, CODEX_CLOUD_URL } = require('../lib/cli');
+const { parseRemoteUrl, printHelp, CODEX_CLOUD_URL, handoffSteps } = require('../lib/cli');
 
 test('parseRemoteUrl ssh', () => {
   assert.deepEqual(parseRemoteUrl('git@github.com:acme/repo.git'), { owner: 'acme', repo: 'repo' });
@@ -19,4 +19,9 @@ test('help includes connect and note', () => {
   assert.match(help, /connect/);
   assert.match(help, /public terminal API/);
   assert.equal(CODEX_CLOUD_URL, 'https://chatgpt.com/codex/cloud');
+});
+
+test('handoffSteps outside git gives friendly guidance', () => {
+  const msg = handoffSteps('/tmp');
+  assert.match(msg, /No git repository detected/);
 });
