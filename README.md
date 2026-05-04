@@ -1,28 +1,23 @@
 # codex-web-cli
 
-Node.js CLI wrapper for opening Codex Cloud and handling repo handoff tasks.
+CLI hỗ trợ workflow **terminal -> Codex Cloud** cho repo GitHub.
 
-## Install
+## Cài đặt
 
 ```bash
 npm install -g .
 ```
 
-## Cloud commands
+## Lệnh chính
 
-- `codex-web open` — open `https://chatgpt.com/codex/cloud`
-- `codex-web cloud` — alias of `open`
-- `codex-web connect` — show repo/branch handoff steps from terminal to Codex Cloud
+- `codex-web open` / `codex-web cloud`: mở `https://chatgpt.com/codex/cloud`
+- `codex-web connect`: in thông tin repo/branch hiện tại và các bước handoff sang Cloud
+- `codex-web connect --open`: vừa in steps vừa mở Cloud
+- `codex-web status`: xem nhanh trạng thái git + link cloud
+- `codex-web repo`: xem root/branch/origin
+- `codex-web pr`: mở trang compare PR cho branch hiện tại
+- `codex-web handoff`: push branch hiện tại lên origin
 
-## Repo helper commands
+## Lưu ý
 
-- `codex-web status`
-- `codex-web repo`
-- `codex-web pr`
-- `codex-web handoff`
-
-
-## Terminal-only note
-
-- Directly using `chatgpt.com/codex/cloud` purely inside terminal (without web) is not supported via a public API.
-- `codex-web terminal` prints this limitation and recommended options.
+`chatgpt.com/codex/cloud` hiện không có public terminal API để chạy trực tiếp 100% trong terminal như một backend CLI riêng.

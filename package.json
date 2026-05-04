@@ -1,7 +1,7 @@
 {
   "name": "codex-web-cli",
-  "version": "0.1.0",
-  "description": "Convenience CLI to streamline Codex Cloud workflows from local repos",
+  "version": "1.0.0",
+  "description": "Terminal helper for Codex Cloud repository handoff workflows",
   "bin": {
     "codex-web": "bin/codex-web.js"
   },
