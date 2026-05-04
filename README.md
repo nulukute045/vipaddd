@@ -8,6 +8,15 @@ CLI hỗ trợ workflow **terminal -> Codex Cloud** cho repo GitHub.
 npm install -g .
 ```
 
+Nếu gặp lỗi `MODULE_NOT_FOUND` như thiếu `bin/codex-web.js` hoặc `lib/cli.js`, chạy lại:
+
+```bash
+npm uninstall -g codex-web-cli
+npm install -g codex-web-cli
+# hoặc nếu cài từ source local
+npm install -g .
+```
+
 ## Lệnh chính
 
 - `codex-web open` / `codex-web cloud`: mở `https://chatgpt.com/codex/cloud`
