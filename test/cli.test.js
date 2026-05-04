@@ -18,5 +18,6 @@ test('help output includes cloud/open commands and url constant is set', () => {
   const help = printHelp();
   assert.match(help, /open/);
   assert.match(help, /cloud/);
+  assert.match(help, /terminal/);
   assert.equal(CODEX_CLOUD_URL, 'https://chatgpt.com/codex/cloud');
 });

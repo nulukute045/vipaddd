@@ -19,3 +19,9 @@ npm install -g .
 - `codex-web repo`
 - `codex-web pr`
 - `codex-web handoff`
+
+
+## Terminal-only note
+
+- Directly using `chatgpt.com/codex/cloud` purely inside terminal (without web) is not supported via a public API.
+- `codex-web terminal` prints this limitation and recommended options.
