@@ -1,6 +1,6 @@
 # codex-web-cli
 
-A small Node.js CLI wrapper to speed up local-to-cloud Codex workflows.
+Node.js CLI wrapper to use Codex from terminal and jump to Codex Cloud quickly.
 
 ## Install
 
@@ -8,21 +8,24 @@ A small Node.js CLI wrapper to speed up local-to-cloud Codex workflows.
 npm install -g .
 ```
 
-Then run:
+## Main use (terminal + cloud)
+
+- `codex-web login` — run `codex --login` (Sign in with ChatGPT flow)
+- `codex-web terminal` — run Codex directly in terminal
+- `codex-web terminal --full-auto` — pass flags through to Codex CLI
+- `codex-web open` — open `https://chatgpt.com/codex/cloud`
+
+## Repo helper commands
+
+- `codex-web status`
+- `codex-web repo`
+- `codex-web pr`
+- `codex-web handoff`
+
+## Requirement
+
+Install official Codex CLI first:
 
 ```bash
-codex-web help
+npm i -g @openai/codex
 ```
-
-## Commands
-
-- `codex-web open` — open `https://chatgpt.com/codex/cloud`
-- `codex-web status` — show repo + branch + dirty state
-- `codex-web repo` — print repository details
-- `codex-web pr` — open GitHub compare page for current branch
-- `codex-web handoff` — push current branch to `origin`
-
-## Notes
-
-- `pr` supports GitHub remotes in SSH and HTTPS forms.
-- `open`/`pr` rely on your OS browser opener (`xdg-open` / `open` / `start`).
