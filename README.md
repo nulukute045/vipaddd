@@ -12,6 +12,7 @@ npm install -g .
 
 - `codex-web open` — open `https://chatgpt.com/codex/cloud`
 - `codex-web cloud` — alias of `open`
+- `codex-web connect` — show repo/branch handoff steps from terminal to Codex Cloud
 
 ## Repo helper commands
 
