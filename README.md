@@ -19,6 +19,7 @@ npm install -g .
 
 ## Lệnh chính
 
+- `codex-web auto`: **một lệnh tự động** (push branch hiện tại, mở Codex Cloud, mở compare PR nếu là GitHub)
 - `codex-web open` / `codex-web cloud`: mở `https://chatgpt.com/codex/cloud`
 - `codex-web connect`: in thông tin repo/branch hiện tại và các bước handoff sang Cloud
 - `codex-web connect --open`: vừa in steps vừa mở Cloud

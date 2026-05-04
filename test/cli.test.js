@@ -16,6 +16,7 @@ test('parseRemoteUrl unsupported', () => {
 
 test('help includes connect and note', () => {
   const help = printHelp();
+  assert.match(help, /auto/);
   assert.match(help, /connect/);
   assert.match(help, /public terminal API/);
   assert.equal(CODEX_CLOUD_URL, 'https://chatgpt.com/codex/cloud');
