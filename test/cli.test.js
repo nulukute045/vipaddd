@@ -14,10 +14,9 @@ test('parseRemoteUrl returns null for unsupported remotes', () => {
   assert.equal(parseRemoteUrl('https://gitlab.com/acme/my-repo.git'), null);
 });
 
-test('help output includes terminal/cloud commands and url constant is set', () => {
+test('help output includes cloud/open commands and url constant is set', () => {
   const help = printHelp();
-  assert.match(help, /login/);
-  assert.match(help, /terminal/);
   assert.match(help, /open/);
+  assert.match(help, /cloud/);
   assert.equal(CODEX_CLOUD_URL, 'https://chatgpt.com/codex/cloud');
 });

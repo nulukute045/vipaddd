@@ -1,6 +1,6 @@
 # codex-web-cli
 
-Node.js CLI wrapper to use Codex from terminal and jump to Codex Cloud quickly.
+Node.js CLI wrapper for opening Codex Cloud and handling repo handoff tasks.
 
 ## Install
 
@@ -8,12 +8,10 @@ Node.js CLI wrapper to use Codex from terminal and jump to Codex Cloud quickly.
 npm install -g .
 ```
 
-## Main use (terminal + cloud)
+## Cloud commands
 
-- `codex-web login` — run `codex --login` (Sign in with ChatGPT flow)
-- `codex-web terminal` — run Codex directly in terminal
-- `codex-web terminal --full-auto` — pass flags through to Codex CLI
 - `codex-web open` — open `https://chatgpt.com/codex/cloud`
+- `codex-web cloud` — alias of `open`
 
 ## Repo helper commands
 
@@ -21,11 +19,3 @@ npm install -g .
 - `codex-web repo`
 - `codex-web pr`
 - `codex-web handoff`
-
-## Requirement
-
-Install official Codex CLI first:
-
-```bash
-npm i -g @openai/codex
-```
